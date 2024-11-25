@@ -8,7 +8,7 @@ from openai import OpenAI
 logging.basicConfig(level=logging.INFO)
 
 # Set up the Flask app
-app = Flask(__name__)
+app= Flask(__name__)
 CORS(app)
 
 @app.route('/api/analyze', methods=['POST'])
@@ -128,4 +128,4 @@ def analyze():
 
 if __name__ == '__main__':
     logging.info("Starting Flask server...")
-    app.run(port=5000, debug=True)
+    app.run(debug=True)
